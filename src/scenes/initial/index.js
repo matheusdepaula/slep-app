@@ -44,6 +44,8 @@ export default function App() {
                 : 'ios-information-circle-outline';
             } else if (route.name === 'Settings') {
               iconName = focused ? 'ios-list-box' : 'ios-list';
+            } else if (route.name === 'Perfil') {
+              iconName = focused ? 'ios-list-box' : 'ios-list';
             }
 
             // You can return any component that you like here!
@@ -54,6 +56,7 @@ export default function App() {
           activeTintColor: 'tomato',
           inactiveTintColor: 'gray',
         }}>
+        <Tab.Screen name="Perfil" component={ProfileScreen} />
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>

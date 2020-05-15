@@ -22,7 +22,7 @@ function SettingsScreen() {
 }
 
 const Tab = createBottomTabNavigator();
-
+// https://oblador.github.io/react-native-vector-icons/
 export default function App() {
   return (
     <NavigationContainer>
@@ -32,13 +32,11 @@ export default function App() {
             let iconName;
 
             if (route.name === 'Home') {
-              iconName = focused
-                ? 'ios-information-circle'
-                : 'ios-information-circle-outline';
+              iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline';
             } else if (route.name === 'Settings') {
               iconName = focused ? 'ios-list-box' : 'ios-list';
             } else if (route.name === 'Perfil') {
-              iconName = focused ? 'ios-list-box' : 'ios-list';
+              iconName = focused ? 'md-person' : 'md-person';
             }
 
             // You can return any component that you like here!

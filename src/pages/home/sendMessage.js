@@ -1,11 +1,27 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { Container, Content, Input, Item, Textarea, Button, Text } from 'native-base';
 
 function SendMessageScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Enviar mensagem</Text>
-    </View>
+    <Container>
+      <Content>
+        <Item
+          rounded
+          style={{
+            margin: 16,
+          }}>
+          {/* <Input style={{ flex: 1 }} placeholder='Digite sua mensagem'/> */}
+          <Textarea
+            style={{flex: 1}}
+            rowSpan={5}
+            placeholder="Digite sua mensagem"
+          />
+        </Item>
+        <Button block style={{ margin: 16 }}>
+          <Text>Enviar</Text>
+        </Button>
+      </Content>
+    </Container>
   );
 }
 

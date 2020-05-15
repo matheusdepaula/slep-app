@@ -1156,6 +1156,14 @@
   dependencies:
     nanoid "^3.1.5"
 
+"@react-navigation/stack@^5.3.5":
+  version "5.3.5"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.3.5.tgz#ab9a4dff8a6ec2828bde02a5ee5e73ec80dd1a98"
+  integrity sha512-b+yxDmx0t09keJ1CaYUe8Xvo+7mJ4MATc9ns/3tbqDpdiFY+mxBq2Y20WvnMroUyJQo2CIQwVUrfNSArImXPIA==
+  dependencies:
+    color "^3.1.2"
+    react-native-iphone-x-helper "^1.2.1"
+
 "@sinonjs/commons@^1.7.0":
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.7.2.tgz#505f55c74e0272b43f6c52d81946bed7058fc0e2"

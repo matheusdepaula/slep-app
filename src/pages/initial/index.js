@@ -3,14 +3,7 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+import Home from '../home/index';
 
 function ProfileScreen() {
   return (
@@ -57,7 +50,7 @@ export default function App() {
           inactiveTintColor: 'gray',
         }}>
         <Tab.Screen name="Perfil" component={ProfileScreen} />
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>

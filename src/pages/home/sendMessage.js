@@ -5,11 +5,7 @@ function SendMessageScreen() {
   return (
     <Container>
       <Content>
-        <Item
-          rounded
-          style={{
-            margin: 16,
-          }}>
+        <Item rounded style={{margin: 16}}>
           {/* <Input style={{ flex: 1 }} placeholder='Digite sua mensagem'/> */}
           <Textarea
             style={{flex: 1}}

@@ -4,22 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from '../home/index';
-
-function ProfileScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Perfil!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Configurações!</Text>
-    </View>
-  );
-}
+import Profile from '../profile/index';
+import Ranking from '../ranking/index';
 
 const Tab = createBottomTabNavigator();
 // https://oblador.github.io/react-native-vector-icons/
@@ -33,7 +19,7 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline';
-            } else if (route.name === 'Settings') {
+            } else if (route.name === 'Ranking') {
               iconName = focused ? 'ios-list-box' : 'ios-list';
             } else if (route.name === 'Perfil') {
               iconName = focused ? 'md-person' : 'md-person';
@@ -47,9 +33,9 @@ export default function App() {
           activeTintColor: 'tomato',
           inactiveTintColor: 'gray',
         }}>
-        <Tab.Screen name="Perfil" component={ProfileScreen} />
+        <Tab.Screen name="Perfil" component={Profile} />
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Ranking" component={Ranking} />
       </Tab.Navigator>
     </NavigationContainer>
   );

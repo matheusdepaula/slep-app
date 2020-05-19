@@ -1,13 +1,42 @@
 import * as React from 'react';
-import { StyleSheet, Alert } from 'react-native';
-import { Container, Body, Text, Content, ListItem, Left, Button, Right, Switch } from 'native-base';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Container, Body, Text, Content, ListItem, Left, Button, Right, Switch, Icon, Thumbnail, View } from 'native-base';
 
 export default class ProfileLogged extends React.Component {
+  getFirstCell = () => {
+    return (
+      <ListItem avatar>
+        <Left>
+          <Thumbnail large source={require('../../assets/avatarMen2.jpg')} />
+        </Left>
+        <Body>
+          <View style={{height: 16}} />
+          <Text>Thiago Marting</Text>
+          <Text note>Ford Ka</Text>
+          <Text note>PNQ-4019</Text>
+          <View style={{height: 24}} />
+        </Body>
+      </ListItem>
+    );
+  };
+
   render() {
     return (
       <Container>
         <Content>
+          {this.getFirstCell()}
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: "#007AFF" }}>
+                <Icon active name="bluetooth" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Detalhes do veículo</Text>
+            </Body>
+            <Right>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#FF9501" }}>
@@ -54,22 +83,3 @@ export default class ProfileLogged extends React.Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button: {
-    height: 60,
-    paddingHorizontal: 32,
-  },
-  title: {
-    alignSelf: 'center',
-    marginHorizontal: 16,
-    marginBottom: 16,
-    textAlign: 'center',
-    fontWeight: '400',
-    top: -40,
-  },
-});

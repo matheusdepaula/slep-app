@@ -11,6 +11,7 @@ export default class ProfileNotLogged extends React.Component {
 
   loginWithGoogle = () => {
     Alert.alert('Login com o Google');
+    this.props.navigation.navigate('ProfileLogged');
   };
 
   facebookButton = () => (

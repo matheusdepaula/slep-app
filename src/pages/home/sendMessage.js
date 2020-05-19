@@ -1,21 +1,39 @@
 import * as React from 'react';
-import { Container, Content, Input, Item, Textarea, Button, Text } from 'native-base';
+import {
+  Container,
+  Content,
+  Item,
+  Textarea,
+  Button,
+  Text,
+  View,
+} from 'native-base';
+import COLORS from '../../atoms/colors';
 
 function SendMessageScreen() {
+  const backgroundColor = COLORS.mainColor;
   return (
     <Container>
       <Content>
-        <Item rounded style={{margin: 16}}>
-          {/* <Input style={{ flex: 1 }} placeholder='Digite sua mensagem'/> */}
-          <Textarea
-            style={{flex: 1}}
-            rowSpan={5}
-            placeholder="Digite sua mensagem"
-          />
-        </Item>
-        <Button block style={{ margin: 16 }}>
-          <Text>Enviar</Text>
-        </Button>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            margin: 16,
+            top: 24,
+          }}>
+          <Item rounded>
+            {/* <Input style={{ flex: 1 }} placeholder='Digite sua mensagem'/> */}
+            <Textarea
+              style={{flex: 1, margin: 8}}
+              rowSpan={5}
+              placeholder="Digite sua mensagem"
+            />
+          </Item>
+          <Button block style={{margin: 16, backgroundColor}}>
+            <Text>Enviar</Text>
+          </Button>
+        </View>
       </Content>
     </Container>
   );

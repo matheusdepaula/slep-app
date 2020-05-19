@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import ProfileLogged from './profileLogged';
 import ProfileNotLogged from './profileNotLogged';
 import COLORS from '../../atoms/colors';
 
@@ -20,6 +21,11 @@ function Navigator() {
       <Stack.Screen
         name="Profile"
         component={ProfileNotLogged}
+        options={{title: 'Perfil'}}
+      />
+      <Stack.Screen
+        name="ProfileLogged"
+        component={ProfileLogged}
         options={{title: 'Perfil'}}
       />
     </Stack.Navigator>

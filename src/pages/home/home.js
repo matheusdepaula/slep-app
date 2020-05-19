@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { Container, View, Button, Text, Item, Input } from 'native-base';
+import {StyleSheet} from 'react-native';
+import {Container, View, Button, Text, Item, Input} from 'native-base';
 import COLORS from '../../atoms/colors';
 
 export default class HomeScreen extends React.PureComponent {
@@ -29,7 +29,7 @@ export default class HomeScreen extends React.PureComponent {
       return (
         <Button
           primary
-          style={{ backgroundColor }}
+          style={{backgroundColor}}
           onPress={() => this.props.navigation.navigate('SendMessage')}>
           <Text> Enviar mensagem </Text>
         </Button>
@@ -44,6 +44,9 @@ export default class HomeScreen extends React.PureComponent {
         <View style={styles.container}>
           <Item rounded style={styles.input}>
             <Input
+              ref={(ref) => {
+                this.input = ref;
+              }}
               placeholder="Digite a placa"
               style={{textAlign: 'center'}}
               maxLength={7}
